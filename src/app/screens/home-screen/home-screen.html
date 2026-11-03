@@ -1,0 +1,25 @@
+<header class="container py-5 text-center">
+  <h1 class="display-5 fw-bold mb-3">Desarrollo de Sitios Web</h1>
+  <p class="lead text-secondary mx-auto" style="max-width: 650px;">
+    Implementación de arquitecturas web modernas utilizando componentes reutilizables y diseño responsivo, 
+    garantizando una experiencia de usuario fluida, código limpio y buenas prácticas de desarrollo frontend.
+  </p>
+</header>
+
+<section class="container pb-5">
+  <div class="row g-4">
+    @for (tec of tecnologias; track tec.nombre) {
+      <div class="col-12 col-md-4">
+        <div class="card h-100 text-center shadow-sm border-0 p-3">
+          <div class="card-body">
+            <div class="mb-3 text-primary display-5">
+              <i class="bi {{ tec.icono }}"></i>
+            </div>
+            <h2 class="h5 fw-bold mt-3">{{ tec.nombre }}</h2>
+            <p class="card-text text-secondary small lh-base mb-0">{{ tec.descripcion }}</p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>
